@@ -24,7 +24,7 @@ def clear_directory(directory_path):
             elif item.is_dir():
                 shutil.rmtree(item)  
     except Exception as e:
-        print(f"Failed to clear dir {directory_path}: {e}")
+        print("Failed clear")
 
 def normalize_instagram_url(url):
    
