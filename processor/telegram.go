@@ -33,6 +33,7 @@ func (p *Processor) StartTG() {
 func (p *Processor) handleMsg(Message *tgbotapi.Message) error {
 
 	if !validateMsg(Message.Text) {
+		p.bot.Send(tgbotapi.NewMessage(Message.Chat.ID, "URL не валидный"))
 		return fmt.Errorf("url is not valid: %s", Message.Text)
 	}
 
